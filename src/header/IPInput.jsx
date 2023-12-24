@@ -1,10 +1,11 @@
 import { useState } from "react";
 import iconArrow from "../assets/icon-arrow.svg"
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {ipData} from "../redux/api/ipApi"
 const IPInput = () => {
+    const {address} = useSelector(state => state.ip)
     const dispatch = useDispatch()
-    const [intValue, setIntValue] = useState("");
+    const [intValue, setIntValue] = useState(address?.ip);
     const formSubmit = (e) =>{
         e.preventDefault()
         dispatch(ipData(intValue))
