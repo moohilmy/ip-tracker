@@ -1,0 +1,6 @@
+.map-contianer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 449px;
+}

@@ -1,0 +1,161 @@
+.main-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../assets/pattern-bg-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 280px;
+    position: relative;
+    z-index: 99999;
+}
+.logo-name{
+    margin: 25px 0;
+    color: #ffffff;
+}
+.int{
+    width: 550px;
+    height: 50px;
+    border-radius: 12px;
+    overflow: hidden;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+.int input{
+    width: calc(100% - 50px);
+    height: 100%;
+    border: none;
+    font-size: var(--Font-size-input);
+    cursor: pointer;
+    padding: 15px;
+}
+.int .btn:hover{
+    background-color: var(--Dark-Gray);
+}
+.btn{
+    width: 50px;
+    height: 100%;
+    cursor: pointer;
+    border: none;
+    background-color: var(--Very-Dark-Gray);
+    transition: .5s all;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    -ms-transition: .5s all;
+    -o-transition: .5s all;
+}
+
+.output-container{
+    display: flex;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 2;
+    min-height: 130px;
+    bottom: 0;
+    transform: translateY(50%);
+    -webkit-transform: translateY(50%);
+    -moz-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    -o-transform: translateY(50%);
+}
+.output-box{
+    padding-right: 80px;
+    width: 275px;
+}
+.output-box:not(:first-child){
+    padding-left: 20px;
+}
+.output-box:not(:last-child){
+    border-right: 1px solid var(--Dark-Gray);
+}
+
+.output-header{
+    text-transform: uppercase;
+    color: var(--Dark-Gray);
+    letter-spacing: 2px;
+    font-size: 10px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.output-text{
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--Very-Dark-Gray);
+}
+
+@media (max-width: 1160px){
+    .int{
+        width: 450px;
+    }
+    .output-box{
+        padding-right: 30px;
+        width: 225px;
+    }
+}
+@media (max-width: 990px){
+    .logo-name{
+        font-size: 25px;
+    }
+    .int{
+        width: 360px;
+    }
+    .output-box{
+        width: 180px;
+    }
+    .output-text{
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 768px){
+    .output-container{
+        flex-direction: column;
+        bottom: -5px;
+        width: 360px;
+    }
+    .output-box{
+        width: 100%;
+        padding: 0 !important;
+        border: none !important;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .output-box:not(:last-child){
+        margin-bottom: 15px;
+    }
+}
+
+
+@media (max-width: 475px){
+    .main-section{
+        background-image: url("../assets/pattern-bg-mobile.png");
+    }
+}
+
+@media (max-width: 375px){
+    
+    .int{
+        width: 300px;
+    }
+    .output-container{
+        width: 300px;
+    }
+}
+
+
+@media (max-width: 300px){
+    .int{
+        width: 250px;
+    }
+    .output-container{
+        width: 250px;
+        bottom: -15px;
+    }
+}
