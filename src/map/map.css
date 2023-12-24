@@ -2,5 +2,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 449px;
+    height: calc(100vh - 280px);
+}
+.err-page{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    padding: 0 20px;
+    flex-direction: column;
+}
+.err-page img{
+    width: 100px;
+}
+.err-page p{
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 30px;
+}
+.error{
+    display: none !important;
 }

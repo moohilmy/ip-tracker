@@ -6,7 +6,8 @@ const ipSlice = createSlice(
     initialState:{
         address: null,
         isIp: false,
-        isLoading: false
+        isLoading: false,
+        isError: false
     },
     reducers:{
         setAddress(state,action){
@@ -17,6 +18,12 @@ const ipSlice = createSlice(
         },
         setIsLoading(state,action){
             state.isLoading = action.payload
+        },
+        setIsError(state,action){
+            state.isError = action.payload
+        },
+        clearAddress(state,action){
+            state.address = null
         }
     }
 

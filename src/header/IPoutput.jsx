@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 
 const IPOutput = () => {
-    const {address,isIp} = useSelector(state => state.ip)
+    const {address,isIp,isError} = useSelector(state => state.ip)
     return (
     <div className="output-container">
         <div className="output-box">
@@ -10,11 +10,11 @@ const IPOutput = () => {
         </div>
         <div className="output-box">
             <h5 className="output-header">location</h5>
-            <p className="output-text">{isIp && `${address?.location?.city}, ${address?.location?.region}`}</p>
+            <p className="output-text">{isIp && !isError && `${address?.location?.city}, ${address?.location?.region}`}</p>
         </div>
         <div className="output-box">
             <h5 className="output-header">time zone</h5>
-            <p className="output-text">{isIp && `UTC ${address?.location?.timezone}`}</p>
+            <p className="output-text">{isIp && !isError && `UTC ${address?.location?.timezone}`}</p>
         </div>
         <div className="output-box">
             <h5 className="output-header">isp</h5>
