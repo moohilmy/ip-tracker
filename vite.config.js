@@ -9,9 +9,4 @@ dotenv.config({ path: `.env.${process.env.NODE_ENV || 'development'}` });
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  build: {
-    env: {
-      VITE_API_KEY: process.env.VITE_API_KEY
-    },
-  },
 })
